@@ -2,6 +2,10 @@ import messageContent from './views/survey/messageContent'
 import situation from './views/survey/situationContent'
 import appmanger from './views/appmanger/appmangerContent'
 
+import error404 from './views/error/404'
+
+import login from './views/login/login'
+
 import searchphone from './views/appmanger/applist/searchPhoneContent'
 
 const routers = [{
@@ -25,6 +29,12 @@ const routers = [{
 
         }]
     }]
+}, {
+    path: "/login",
+    component: login
+},{
+    path:"*",
+    component:error404
 }];
 
 export default routers;

@@ -1,9 +1,9 @@
 <template>
     <div>
         <Row :gutter="16">
-            <Col span="6">
+            <Col span="8">
                 <Card>
-                    <p slot="title" @click="aa">
+                    <p slot="title">
                         <Icon type="ios-film-outline"></Icon>
                         使用情况
                     </p>
@@ -16,9 +16,8 @@
 
 <script>
 export default {
-  methods: {
-    aa() {
-      var myChart = echarts.init(document.getElementById("allsituation"));
+  mounted:function(){
+          var myChart = echarts.init(document.getElementById("allsituation"));
 
       myChart.setOption({
         xAxis: {
@@ -35,7 +34,6 @@ export default {
           }
         ]
       });
-    }
   }
 };
 </script>
