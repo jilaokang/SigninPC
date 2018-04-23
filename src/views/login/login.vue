@@ -2,7 +2,7 @@
     <div>
         <div id="login">
             <Row type="flex" justify="center" align="middle" style="{height:sreceenheight}" >
-                <Col span="8">
+                <Col span="6">
                 <Card>
                     <p slot="title">
                         登录

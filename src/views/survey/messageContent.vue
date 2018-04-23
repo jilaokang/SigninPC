@@ -18,10 +18,14 @@
         </p>
         <Tabs>
           <TabPane label="待查看" icon="information-circled">
-            <Table style="border-radius: 5px" border :columns="columns7" :data="data6"></Table>
+            <Table style="border-radius: 5px" border :columns="unFinshMessage.columns" :data="unFinshDate"></Table>
           </TabPane>
-          <TabPane label="未解决" icon="close-round">未解决</TabPane>
-          <TabPane label="已解决" icon="checkmark-round">已解决</TabPane>
+          <TabPane label="未解决" icon="close-round">
+            <Table style="border-radius: 5px" border :columns="waitFinshMessage.columns" :data="waitFinshDate"></Table>
+          </TabPane>
+          <TabPane label="已解决" icon="checkmark-round">
+            <Table style="border-radius: 5px" border :columns="hasFinshMessage.columns" :data="hasFinshDate"></Table>
+          </TabPane>
         </Tabs>
       </Card>
       </Col>
@@ -33,97 +37,192 @@
   export default {
     data() {
       return {
-        columns7: [{
-            title: "姓名",
-            key: "name",
-            render: (h, params) => {
-              return h("div", [
-                h("Icon", {
-                  props: {
-                    type: "person"
-                  }
-                }),
-                h("strong", params.row.name)
-              ]);
+        hasFinshMessage: {
+          columns: [{
+              title: "姓名",
+              key: "name"
+            },
+            {
+              title: "功能",
+              key: "effet"
+            },
+            {
+              title: "留言内容",
+              key: "content"
+            }, {
+              title: "回复内容",
+              key: "replay"
             }
-          },
-          {
-            title: "功能",
-            key: "age"
-          },
-          {
-            title: "留言内容",
-            key: "address"
-          },
-          {
-            title: "Action",
-            key: "action",
-            width: 150,
-            align: "center",
-            render: (h, params) => {
-              return h("div", [
-                h(
-                  "Button", {
+          ]
+        },
+  
+        unFinshMessage: {
+          columns: [{
+              title: "姓名",
+              key: "name",
+              render: (h, params) => {
+                return h("div", [
+                  h("Icon", {
                     props: {
-                      type: "primary",
-                      size: "small"
-                    },
-                    style: {
-                      marginRight: "5px"
-                    },
-                    on: {
-                      click: () => {
-                        this.show(params.index);
-                      }
+                      type: "person"
                     }
-                  },
-                  "View"
-                ),
-                h(
-                  "Button", {
-                    props: {
-                      type: "error",
-                      size: "small"
-                    },
-                    on: {
-                      click: () => {
-                        this.remove(params.index);
+                  }),
+                  h("strong", params.row.name)
+                ]);
+              }
+            },
+            {
+              title: "功能",
+              key: "effet"
+            },
+            {
+              title: "留言内容",
+              key: "content"
+            },
+            {
+              title: "操作",
+              key: "action",
+              width: 150,
+              align: "center",
+              render: (h, params) => {
+                return h("div", [
+                  h(
+                    "Button", {
+                      props: {
+                        type: "primary",
+                        size: "small"
+                      },
+                      style: {
+                        marginRight: "5px"
+                      },
+                      on: {
+                        click: () => {
+                          this.show(params.row.key);
+                        }
                       }
-                    }
-                  },
-                  "Delete"
-                )
-              ]);
+                    },
+                    "回复"
+                  ),
+                  h(
+                    "Button", {
+                      props: {
+                        type: "error",
+                        size: "small"
+                      },
+                      on: {
+                        click: () => {
+                          this.remove(params.row.key);
+                        }
+                      }
+                    },
+                    "待办"
+                  )
+                ]);
+              }
             }
+          ],
+        },
+  
+  
+  
+        waitFinshMessage: {
+          columns: [{
+              title: "姓名",
+              key: "name"
+            },
+            {
+              title: "功能",
+              key: "effet"
+            },
+            {
+              title: "留言内容",
+              key: "content"
+            }, {
+              title: "操作",
+              key: "action",
+              width: 150,
+              align: "center",
+              render: (h, params) => {
+                return h("div", [
+                  h(
+                    "Button", {
+                      props: {
+                        type: "primary",
+                        size: "small"
+                      },
+                      style: {
+                        marginRight: "5px"
+                      },
+                      on: {
+                        click: () => {
+                          this.show(params.row.key);
+                        }
+                      }
+                    },
+                    "回复"
+                  )
+                ]);
+              }
+            }
+          ]
+        },
+  
+        data: [{
+          key:0,
+            name: "张三",
+            effet: "校车查询",
+            content: "这地图怎么画的，把我拖到黄冈去了，好了，我终于可以回家了",
+            replay: "",
+            completed: 0
+          },
+          {
+            key:1,
+            name: "李四",
+            effet: "留言版块",
+            content: "这个版块就两个内容，能不能指明一下留言的对应内容啊",
+            replay: "",
+            completed: 0
+  
+          },
+          {
+            key:2,
+            name: "王五",
+            effet: "其他版块",
+            content: "没什么，我留言就想告诉你们，这谁吉尔开发的，太**好用了！！爱你么么哒",
+            replay: "",
+            completed: 0
+          },
+          {
+            key:3,
+            name: "李六",
+            effet: "二手版块",
+            content: "这个版块有毒，我天天趴在上面看今日进账...",
+            replay: "",
+            completed: 0
+          },
+          {
+            key:4,
+            name: "赵七",
+            effet: "二手版块",
+            content: "难道我就这么没有存在感，你们为了凑数才叫我？？？",
+            replay: "",
+            completed: 0
           }
         ],
-        data6: [{
-            name: "张三",
-            age: "校车查询",
-            address: "这地图怎么画的，把我拖到黄冈去了，好了，我终于可以回家了"
-          },
-          {
-            name: "李四",
-            age: "留言版块",
-            address: "这个版块就两个内容，能不能指明一下留言的对应内容啊"
-          },
-          {
-            name: "王五",
-            age: "其他版块",
-            address: "没什么，我留言就想告诉你们，这谁吉尔开发的，太**好用了！！爱你么么哒"
-          },
-          {
-            name: "李六",
-            age: "二手版块",
-            address: "这个版块有毒，我天天趴在上面看今日进账..."
-          },
-          {
-            name: "赵七",
-            age: "二手版块",
-            address: "难道我就这么没有存在感，你们为了凑数才叫我？？？"
-          }
-        ]
+  
       };
+    },
+  
+    computed: {
+      unFinshDate() {
+        return this.data.filter(data => data.completed === 0)
+      },
+      waitFinshDate() {
+        return this.data.filter(data => data.completed === 1)
+      },
+      hasFinshDate() {
+        return this.data.filter(data => data.completed === 2)
+      }
     },
     mounted: function() {
       var myChart = echarts.init(document.getElementById("messageSurvey"));
@@ -182,14 +281,20 @@
     methods: {
       show(index) {
         this.$Modal.info({
-          title: "User Info",
-          content: `Name：${this.data6[index].name}<br>Age：${
-            this.data6[index].age
-          }<br>Address：${this.data6[index].address}`
+          title: "留言信息",
+          content: `姓名：${this.data[index].name}<br>功能：${
+                this.data[index].effet
+              }<br>留言：${this.data[index].content}
+                <br/>回复：<Input id="replayInput" type="textarea" ></Input>`
         });
+
+        document.getElementById('replayInput')
+
+
+        return this.data[index].completed = 2;
       },
       remove(index) {
-        this.data6.splice(index, 1);
+        return this.data[index].completed = 1;
       }
     }
   };
