@@ -30,6 +30,19 @@
       </Card>
       </Col>
     </Row>
+    <template>
+      <Modal
+          v-model="replay.modal"
+          title="留言反馈"
+          @on-ok="ok"
+          @on-cancel="cancel">
+          <div style="margin:1em 0;line-height:2">
+            <p>{{this.data[this.replay.key].name}}-{{this.data[this.replay.key].effet}}</p>
+            <p>{{this.data[this.replay.key].content}}</p>
+          </div>
+        <Input v-model="replay.content" type="textarea" :rows="4" placeholder="请输入留言"></Input>
+      </Modal>
+</template>
   </div>
 </template>
 
@@ -37,6 +50,11 @@
   export default {
     data() {
       return {
+        replay:{
+          modal:false,
+          key:0,
+          content:''
+        },
         hasFinshMessage: {
           columns: [{
               title: "姓名",
@@ -52,8 +70,7 @@
             }, {
               title: "回复内容",
               key: "replay"
-            }
-          ]
+            }]
         },
   
         unFinshMessage: {
@@ -97,7 +114,7 @@
                       },
                       on: {
                         click: () => {
-                          this.show(params.row.key);
+                          this.showModal(params.row.key)
                         }
                       }
                     },
@@ -122,8 +139,6 @@
             }
           ],
         },
-  
-  
   
         waitFinshMessage: {
           columns: [{
@@ -155,7 +170,7 @@
                       },
                       on: {
                         click: () => {
-                          this.show(params.row.key);
+                          this.showModal(params.row.key)
                         }
                       }
                     },
@@ -168,7 +183,7 @@
         },
   
         data: [{
-          key:0,
+            key: 0,
             name: "张三",
             effet: "校车查询",
             content: "这地图怎么画的，把我拖到黄冈去了，好了，我终于可以回家了",
@@ -176,7 +191,7 @@
             completed: 0
           },
           {
-            key:1,
+            key: 1,
             name: "李四",
             effet: "留言版块",
             content: "这个版块就两个内容，能不能指明一下留言的对应内容啊",
@@ -185,7 +200,7 @@
   
           },
           {
-            key:2,
+            key: 2,
             name: "王五",
             effet: "其他版块",
             content: "没什么，我留言就想告诉你们，这谁吉尔开发的，太**好用了！！爱你么么哒",
@@ -193,7 +208,7 @@
             completed: 0
           },
           {
-            key:3,
+            key: 3,
             name: "李六",
             effet: "二手版块",
             content: "这个版块有毒，我天天趴在上面看今日进账...",
@@ -201,7 +216,7 @@
             completed: 0
           },
           {
-            key:4,
+            key: 4,
             name: "赵七",
             effet: "二手版块",
             content: "难道我就这么没有存在感，你们为了凑数才叫我？？？",
@@ -279,22 +294,25 @@
       });
     },
     methods: {
-      show(index) {
-        this.$Modal.info({
-          title: "留言信息",
-          content: `姓名：${this.data[index].name}<br>功能：${
-                this.data[index].effet
-              }<br>留言：${this.data[index].content}
-                <br/>回复：<Input id="replayInput" type="textarea" ></Input>`
-        });
-
-        document.getElementById('replayInput')
-
-
-        return this.data[index].completed = 2;
-      },
+  
       remove(index) {
         return this.data[index].completed = 1;
+      },
+      showModal(index){
+        this.replay.modal=true;
+        this.replay.key = index;
+      },
+
+      ok() {
+        let index =this.replay.key;
+        this.$Message.info('回复成功');
+        this.data[index].replay = this.replay.content;
+        this.replay.content='';
+        return this.data[index].completed = 2;
+      },
+
+      cancel() {
+        this.$Message.info('取消回复');
       }
     }
   };

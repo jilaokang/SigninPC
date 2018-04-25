@@ -1,3 +1,11 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "team.showWelcomeMessage": false,
+    "git.confirmSync": false,
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 14,
+    "view-in-browser.customBrowser": "chrome"
 }
