@@ -1,5 +1,6 @@
 {
-    "git.ignoreLimitWarning": true,    "explorer.confirmDelete": false,
+    "git.ignoreLimitWarning": true,
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "team.showWelcomeMessage": false,
     "git.confirmSync": false,

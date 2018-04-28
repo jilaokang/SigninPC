@@ -1,13 +1,13 @@
 <template>
   <div>
     <Row :gutter="16">
-      <Col span="8">
+      <Col span="6">
       <Card>
         <p slot="title">
           <Icon type="ios-film-outline"></Icon>
           留言总览
         </p>
-        <div id="messageSurvey" style="width:100%;height:300%"></div>
+        <div id="messageSurvey" style="width:90%;height:300%"></div>
       </Card>
       </Col>
       <Col span="16">

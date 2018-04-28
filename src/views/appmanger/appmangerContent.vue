@@ -1,18 +1,17 @@
 <template>
     <div>
         <Row :gutter="16">
-            <Col span="8">
+            <Col span="4">
             <Card>
                 <p slot="title">
                     <Icon type="ios-film-outline"></Icon>
                     版块选择
                 </p>
-                <Select v-model="model1" style="width:200px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                    </Select>
+                <Select v-model="model1" style="width:100%">
+                    <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                </Select>
     
-                <div id="appinfomation" style="width:100%;height:300%"></div>
-                <p>今日使用：20人</p>
+                <div id="appinfomation" style="width:90%;height:200%"></div>
             </Card>
             </Col>
             <Col span="16">
@@ -38,45 +37,72 @@
                     },
                     {
                         value: "London",
-                        label: "London"
+                        label: "二手易购"
                     },
                     {
                         value: "Sydney",
-                        label: "Sydney"
+                        label: "兼职查询"
                     },
                     {
                         value: "Ottawa",
-                        label: "Ottawa"
-                    },
-                    {
-                        value: "Paris",
-                        label: "Paris"
-                    },
-                    {
-                        value: "Canberra",
-                        label: "Canberra"
+                        label: "电话查询"
                     }
                 ],
                 model1: ""
             };
         },
-
+    
         mounted: function() {
             var myChart = echarts.init(document.getElementById("appinfomation"));
     
             myChart.setOption({
-                xAxis: {
-                    type: "category",
-                    data: ["1月", "2月", "3月", "4月", "5月", "6月"]
+                title: {
+                    text: ''
                 },
-                yAxis: {
-                    type: "value"
+                tooltip: {},
+                legend: {
+    
+                },
+                radar: {
+                    name: {
+                        textStyle: {
+                            color: '#fff',
+                            backgroundColor: '#999',
+                            borderRadius: 3,
+                            padding: [3, 5]
+                        }
+                    },
+                    indicator: [{
+                            name: '平均日活跃',
+                            max: 10
+                        },
+                        {
+                            name: '使用总人数',
+                            max: 10
+                        },
+                        {
+                            name: '使用频率排名',
+                            max: 10
+                        },
+                        {
+                            name: '反馈排名',
+                            max: 10
+                        },
+                        {
+                            name: '不知道写啥',
+                            max: 10
+                        }
+                    ]
                 },
                 series: [{
-                    data: [820, 932, 901, 934, 1290, 1330, 1320],
-                    type: "line"
+                    name: ' ',
+                    type: 'radar',
+                    data: [{
+                        value: [8, 7, 9, 6, 8],
+                        name: ''
+                    }]
                 }]
-            });
+            })
         }
     }
 </script>
