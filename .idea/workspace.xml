@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="d733fe77-f642-4486-8413-7e27d4e0c73d" name="Default" comment="增加node后端">
+      <change afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/models/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/routers/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/schemas/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+=======
     <list default="true" id="d733fe77-f642-4486-8413-7e27d4e0c73d" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> b8b9eec2a44b7aeb6517b6d9ff1b63bba91f3b00
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/node/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/routers/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/node/routers/message.js" afterDir="false" />
@@ -347,14 +357,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525952412406</updated>
+<<<<<<< HEAD
+      <workItem from="1525952414298" duration="3644000" />
+=======
       <workItem from="1525952414298" duration="3258000" />
       <workItem from="1525961690649" duration="6399000" />
+<<<<<<< HEAD
       <workItem from="1526006183765" duration="951000" />
+=======
+      <workItem from="1526006183765" duration="894000" />
+>>>>>>> b8b9eec2a44b7aeb6517b6d9ff1b63bba91f3b00
+>>>>>>> babdcf9757247f281fa80f05cdc5ff5c354d2059
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="10608000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="3644000" />
+=======
+    <option name="totallyTimeSpent" value="10551000" />
+>>>>>>> b8b9eec2a44b7aeb6517b6d9ff1b63bba91f3b00
+>>>>>>> babdcf9757247f281fa80f05cdc5ff5c354d2059
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,11 +392,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
+=======
     <frame x="0" y="23" width="1280" height="711" extended-state="0" />
     <editor active="true" />
+>>>>>>> b8b9eec2a44b7aeb6517b6d9ff1b63bba91f3b00
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32935324" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" weight="0.32935324" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32935324" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32935324" />
+      <window_info id="npm" side_tool="true" />
+      <window_info active="true" anchor="right" id="Mongo Explorer" visible="true" weight="0.32960597" />
+      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.37613636" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+=======
+>>>>>>> b8b9eec2a44b7aeb6517b6d9ff1b63bba91f3b00
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.28271407" side_tool="true" visible="true" weight="0.32736155" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49919224" weight="0.32899022" />
@@ -397,6 +439,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加node后端" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加node后端" />
+=======
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -407,6 +454,7 @@
       </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
+>>>>>>> b8b9eec2a44b7aeb6517b6d9ff1b63bba91f3b00
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node/app.js">
