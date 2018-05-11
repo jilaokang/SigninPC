@@ -13,7 +13,7 @@ router.get('/message', (req, res) => {
 
 router.post('/message', (req, res) => {
     res.on('data', data => {
-        console.log(data);
+        console.log(data);S
         let obj = JSON.parse(data.toString())
         let repley = obj.replay;
         let name = obj.name;

@@ -120,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/node/routers/message.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="124">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -349,12 +349,12 @@
       <updated>1525952412406</updated>
       <workItem from="1525952414298" duration="3258000" />
       <workItem from="1525961690649" duration="6399000" />
-      <workItem from="1526006183765" duration="894000" />
+      <workItem from="1526006183765" duration="951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10551000" />
+    <option name="totallyTimeSpent" value="10608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -632,7 +632,7 @@
     <entry file="file://$PROJECT_DIR$/node/routers/message.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
         </state>
       </provider>
     </entry>
