@@ -6,5 +6,6 @@ module.exports = new mongoose.Schema({
     block: String,
     content: String,
     replay: String,
-    completed: Number
+    completed: Number,
+    StudentId:Number
 });
