@@ -7,7 +7,8 @@
     "init": "webpack --progress --config webpack.dev.config.js",
     "dev": "webpack-dev-server --content-base ./ --open --inline --hot --compress --history-api-fallback --config webpack.dev.config.js",
     "build": "webpack --progress --hide-modules --config webpack.prod.config.js",
-    "lint": "eslint --fix --ext .js,.vue src"
+    "lint": "eslint --fix --ext .js,.vue src",
+    "server": "supervisor ./node/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
     "axios": "^0.15.3",
     "echarts": "^3.8.5",
     "express": "^4.16.3",
+    "express-cors": "0.0.3",
     "iview": "^2.7.4",
     "mongoose": "^5.0.18",
     "vue": "^2.5.2",
