@@ -75,7 +75,6 @@
                             key: "replay"
                         }]
                 },
-
                 unFinshMessage: {
                     columns: [{
                         title: "姓名",
@@ -142,7 +141,6 @@
                         }
                     ],
                 },
-
                 waitFinshMessage: {
                     columns: [{
                         title: "姓名",
@@ -226,7 +224,6 @@
                         completed: 0
                     }
                 ],
-
             };
         },
         computed: {
@@ -241,6 +238,16 @@
             }
         },
         mounted: function () {
+            axios.get('http://localhost:8084/message',{
+                name,
+                effet,
+                content,
+                completed,
+            }).then(res => {
+                console.log(res)
+            })
+
+
             var myChart = echarts.init(document.getElementById("messageSurvey"));
 
             myChart.setOption({
@@ -295,10 +302,23 @@
             });
         },
         methods: {
-
             remove(index) {
+                axios.post('http://localhost:8084/message', {
+                    name: this.data[index].name,
+                    block: this.data[index].effet,
+                    content: this.data[index].content,
+                    completed:1
+                }).then(res => {
+                        if (res.data === 'ok') {
+                            this.$Message.info('放入待办');
+                        } else {
+                            this.$Message.info('放入失败');
+                        }
+                    }
+                );
                 return this.data[index].completed = 1;
             },
+
             showModal(index) {
                 this.replay.modal = true;
                 this.replay.key = index;
@@ -307,22 +327,23 @@
             ok() {
                 let index = this.replay.key;
                 this.data[index].replay = this.replay.content;
-                console.log(`${this.data[index].replay} ${this.data[index].replay}`)
 
                 axios.post('http://localhost:8084/message', {
-                    replay: "kaso's replay",
-                    name: "kaso",
+                    replay: this.data[index].replay,
+                    name: this.data[index].name,
+                    block: this.data[index].effet,
+                    content: this.data[index].content,
+                    completed:2
                 }).then(res => {
-                    if (res.data === 'ok') {
-                        this.$Message.info('回复成功');
-                    } else {
-                        this.$Message.info('回复失败');
+                        if (res.data === 'ok') {
+                            this.$Message.info('回复成功');
+                        } else {
+                            this.$Message.info('回复失败');
+                        }
                     }
-                }
                 );
 
                 this.replay.content = '';
-                this.$Message.info('回复成功');
                 return this.data[index].completed = 2;
             },
 

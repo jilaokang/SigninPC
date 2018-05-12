@@ -1,11 +1,17 @@
 const mongoose = require('mongoose');
 
 module.exports = new mongoose.Schema({
-    key: Number,
+    key:{
+        type:Number,
+        default:0
+    },
     name: String,
     block: String,
     content: String,
     replay: String,
-    completed: Number,
+    completed: {
+        type:Number,
+        default:0
+    },
     StudentId:Number
 });

@@ -12,19 +12,44 @@ router.get('/message', (req, res) => {
 });
 
 router.post('/message', (req, res) => {
-    res.on('data', data => {
-        console.log(data);S
-        let obj = JSON.parse(data.toString())
-        let repley = obj.replay;
-        let name = obj.name;
+    req.on('data', async data => {
+        const obj = JSON.parse(data.toString());
 
-        console.log(repley);
+        console.log(obj)
+        const msg = await MessageModel.findOne({name: obj.name});
+        if (msg) {
+            await msg.update({
+                replay: obj.replay,
+                completed: obj.completed
+            })
+        } else {
+            await MessageModel.create({
+                replay: obj.replay,
+                name: obj.name,
+                block: obj.block,
+                content: obj.content
+            })
+        }
 
-        MessageModel.find({name: "kaso"}, (err, docs) => {
-            MessageModel.repley = repley;
-            MessageModel.save();
-            req.end('ok')
-        });
+        // save 方法
+        // const sb = new MessageModel({
+        //    name: 'sb'
+        // })
+        // sb.save()
+
+
+        // updata方法1
+        //  MessageModel.find({name: "kaso"}, (err, docs) => {
+        //      console.log(docs);
+        //      docs.update({replay: repley})
+        //      res.end('ok')
+        //  });
+
+        // updata方法2
+        // const msg = await MessageModel.findOne({name: 'kaso'});
+        // await msg.update({replay: repley})
+
+        res.end('ok')
     });
 });
 
