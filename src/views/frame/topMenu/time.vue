@@ -1,24 +1,32 @@
 <template>
     <MenuItem name="1">
-        {{this.date}}
+        {{this.time}}
     </MenuItem>
 </template>
 
 <script>
     export default {
-        computed: {
-            date: function () {
-                const now = new Date();
-                let month = now.getMonth() + 1;
-                let day = now.getDay();
-                let hours = now.getHours();
-                let min = now.getMinutes();
-                let sec = now.getSeconds();
-                return `时间：${month}月${day}日 ${hours}:${min}:${sec}`
-            }
-
+        data() {
+            return {
+                time: ''
+            };
         },
-        methods: {
+        mounted: function () {
+            setInterval(() => {
+                let a = new Date();
+
+                function check(str) {
+                    str = str.toString();
+                    if (str.length < 2) {
+                        str = "0" + str;
+                    }
+                    return str;
+                }
+
+                this.time = `${check(a.getMonth()+1)}月${check(a.getDay())}日  ${check(a.getHours())}:${check(a.getMinutes())}:${check(
+                    a.getSeconds()
+                )}`;
+            }, 1000)
         }
     }
 </script>

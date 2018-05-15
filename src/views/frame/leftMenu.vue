@@ -1,5 +1,5 @@
 <template>
-    <Menu active-name="1-2" theme="light" width="auto" :open-names="['1']">
+    <Menu active-name="1-2" theme="light" width="auto" :open-names="['1','2']">
         <survey></survey>
         <evalueation></evalueation>
         <record></record>
