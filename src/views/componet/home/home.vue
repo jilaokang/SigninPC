@@ -10,7 +10,7 @@
                                     <img src="../../static/img/avatar.jpg" alt="头像">
                                 </Col>
                                 <Col span="18">
-                                    <h3>张老师</h3>
+                                    <h3>钱老师</h3>
                                     <h4>{{this.welcomeStr}}</h4>
                                 </Col>
                             </Row>
@@ -157,7 +157,7 @@
             const myChart = echarts.init(document.getElementById("report"));
 
             myChart.setOption({
-                color: ['#3398DB'],
+                color: ['#1f9bed'],
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -215,7 +215,7 @@
 
     .diyCard .ivu-icon {
         font-size: 3.5em;
-        color: cornflowerblue;
+        color: #1f9bed;
     }
 
     .marginTop16 {
@@ -239,13 +239,9 @@
         list-style: none;
     }
 
-    ul li a span {
-        color: #1f9bed;
-    }
-
     #report {
-        width: 80%;
+        width: 85%;
         line-height: 3;
-        height: 300px;
+        height: 260px;
     }
 </style>
