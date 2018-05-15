@@ -2,26 +2,26 @@
     <div>
         <Row :gutter="16">
             <Col span="4">
-            <Card>
-                <p slot="title">
-                    <Icon type="ios-film-outline"></Icon>
-                    版块选择
-                </p>
-                <Select v-model="model1" style="width:100%">
-                    <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                </Select>
-    
-                <div id="appinfomation" style="width:90%;height:200%"></div>
-            </Card>
+                <Card>
+                    <p slot="title">
+                        <Icon type="ios-film-outline"></Icon>
+                        版块选择
+                    </p>
+                    <Select v-model="model1" style="width:100%">
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                    </Select>
+
+                    <div id="appinfomation" style="width:90%;height:200%"></div>
+                </Card>
             </Col>
             <Col span="16">
-            <Card>
-                <p slot="title">
-                    <Icon type="ios-film-outline"></Icon>
-                    功能信息
-                </p>
-                <router-view></router-view>
-            </Card>
+                <Card>
+                    <p slot="title">
+                        <Icon type="ios-film-outline"></Icon>
+                        功能信息
+                    </p>
+                    <router-view></router-view>
+                </Card>
             </Col>
         </Row>
     </div>
@@ -32,9 +32,9 @@
         data() {
             return {
                 cityList: [{
-                        value: "New York",
-                        label: "校车查询"
-                    },
+                    value: "New York",
+                    label: "校车查询"
+                },
                     {
                         value: "London",
                         label: "二手易购"
@@ -51,18 +51,16 @@
                 model1: ""
             };
         },
-    
-        mounted: function() {
+
+        mounted: function () {
             var myChart = echarts.init(document.getElementById("appinfomation"));
-    
+
             myChart.setOption({
                 title: {
                     text: ''
                 },
                 tooltip: {},
-                legend: {
-    
-                },
+                legend: {},
                 radar: {
                     name: {
                         textStyle: {
@@ -73,9 +71,9 @@
                         }
                     },
                     indicator: [{
-                            name: '平均日活跃',
-                            max: 10
-                        },
+                        name: '平均日活跃',
+                        max: 10
+                    },
                         {
                             name: '使用总人数',
                             max: 10
@@ -108,5 +106,5 @@
 </script>
 
 <style scoped>
-    
+
 </style>
