@@ -1,27 +1,32 @@
-import appmanger from './views/appmanger/appmanger'
+import appmanger from './views/componet/appmanger/appmanger'
 
-import message from './views/survey/message'
-import situation from './views/survey/situation'
-import college from './views/survey/college'
-import faculty from './views/survey/faculty';
-import classBlock from './views/survey/classBlock'
-import student from './views/survey/student'
-import teach from './views/survey/teach'
+import message from './views/componet/survey/message'
+import situation from './views/componet/survey/situation'
+import college from './views/componet/survey/college'
+import faculty from './views/componet/survey/faculty';
+import classBlock from './views/componet/survey/classBlock'
+import student from './views/componet/survey/student'
+import teach from './views/componet/survey/teach'
 
-import error404 from './views/error/404'
+import error404 from './views/componet/error/404'
 
-import login from './views/login/login'
+import home from './views/componet/home/home'
 
-import searchphone from './views/appmanger/applist/searchPhoneContent'
+import login from './views/componet/login/login'
+
+import searchphone from './views/componet/appmanger/applist/searchPhoneContent'
 
 const routers = [{
     path: '/',
     meta: {
-        title: ''
+        title: '整体概况'
     },
-    component: (resolve) => require(['./views/index.vue'], resolve),
+    component: (home) => require(['./views/index.vue'], home),
 
     children: [{
+        path: '/',
+        component: home
+    }, {
         path: '/message',
         component: message
     }, {
@@ -47,9 +52,9 @@ const routers = [{
     }, {
         path: "/student",
         component: student
-    },{
-        path:"/teach",
-        component:teach
+    }, {
+        path: "/teach",
+        component: teach
     }]
 }, {
     path: "/login",

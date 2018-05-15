@@ -47,11 +47,11 @@
     </div>
 </template>
 <script>
-    import leftSider from './frame/leftMenu';
-    import centerContent from './frame/content';
-    import topNav from './frame/topNav'
-    import footFather from './frame/footer'
-    import topMenu from './frame/topMenu'
+    import leftSider from './componet/frame/leftMenu';
+    import centerContent from './componet/frame/content';
+    import topNav from './componet/frame/topNav'
+    import footFather from './componet/frame/footer'
+    import topMenu from './componet/frame/topMenu'
 
     export default {
         components: {

@@ -1,7 +1,7 @@
 <template>
     <Submenu name="1">
         <template slot="title">
-            <Icon type="ios-navigate"></Icon>
+            <Icon type="home"></Icon>
             整体概况
         </template>
         <MenuItem name="1-1">

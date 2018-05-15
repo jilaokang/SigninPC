@@ -30,7 +30,7 @@
     }
 
     .layout-nav {
-        width: 420px;
+        width: 240px;
         margin: 0 auto;
         margin-right: 20px;
     }

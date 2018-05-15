@@ -1,5 +1,5 @@
 <template>
-    <MenuItem name="3">
+    <MenuItem name="4">
             <Icon type="paintbrush"></Icon>
             <router-link to="/record">
                 操作记录

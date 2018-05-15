@@ -22,8 +22,7 @@
                     }
                     return str;
                 }
-
-                this.time = `${check(a.getMonth()+1)}月${check(a.getDay())}日  ${check(a.getHours())}:${check(a.getMinutes())}:${check(
+                this.time = `${a.getMonth()+1}月${check(a.getDay())}日  ${check(a.getHours())}:${check(a.getMinutes())}:${check(
                     a.getSeconds()
                 )}`;
             }, 1000)
