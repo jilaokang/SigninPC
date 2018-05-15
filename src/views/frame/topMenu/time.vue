@@ -16,7 +16,7 @@
                 let sec = now.getSeconds();
                 return `时间：${month}月${day}日 ${hours}:${min}:${sec}`
             }
-            
+
         },
         methods: {
         }

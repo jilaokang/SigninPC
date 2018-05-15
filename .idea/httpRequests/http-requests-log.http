@@ -2,6 +2,14 @@ GET http://localhost:8084/message
 Accept: */*
 Cache-Control: no-cache
 
+<> 2018-05-11T102639.200.txt
+
+###
+
+GET http://localhost:8084/message
+Accept: */*
+Cache-Control: no-cache
+
 <> 2018-05-10T113414.200.txt
 
 ###
