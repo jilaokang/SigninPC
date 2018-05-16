@@ -209,7 +209,7 @@
     .diyCard {
         height: 120px;
         text-align: center;
-        border: aliceblue 1px solid;
+        border: #dde5eb 1px solid;
         border-radius: 5px;
     }
 
