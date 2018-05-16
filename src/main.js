@@ -8,13 +8,10 @@ import App from './app.vue';
 import 'iview/dist/styles/iview.css';
 import axios from 'axios';
 
+const store = require('./store/main.js')
 
 Vue.use(VueRouter);
-
-
 Vue.use(iView);
-
-
 
 // 路由配置
 const RouterConfig = {
@@ -35,10 +32,9 @@ router.afterEach(() => {
     window.scrollTo(0, 0);
 });
 
-
-
 new Vue({
     el: '#app',
-    router: router,
+    router,
+    store,
     render: h => h(App)
 });

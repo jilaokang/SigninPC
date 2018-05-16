@@ -14,7 +14,7 @@
                                     <h4>{{this.welcomeStr}}</h4>
                                 </Col>
                             </Row>
-                            <hr/>
+                            <hr style="border-top:1px solid #dde5eb;"/>
                             <Row :gutter="16" class="marginTop16">
                                 <Col span="24">
                                     <div>
@@ -101,9 +101,6 @@
                         <Table border :columns="columns1" :data="data1"></Table>
                     </Card>
                 </Col>
-            </Row>
-            <Row>
-
             </Row>
         </div>
     </div>
@@ -198,6 +195,7 @@
 </script>
 
 <style scoped>
+
     .center {
         text-align: center;
     }

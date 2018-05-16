@@ -1,60 +1,75 @@
-import appmanger from './views/componet/appmanger/appmanger'
+// survey
+import surveySituation from './views/componet/survey/situation'
+import surveyCollege from './views/componet/survey/college'
+import surveyFaculty from './views/componet/survey/faculty';
+import surveyClassBlock from './views/componet/survey/classBlock'
+import surveyStudent from './views/componet/survey/student'
+import surveyTeach from './views/componet/survey/teach'
 
-import message from './views/componet/survey/message'
-import situation from './views/componet/survey/situation'
-import college from './views/componet/survey/college'
-import faculty from './views/componet/survey/faculty';
-import classBlock from './views/componet/survey/classBlock'
-import student from './views/componet/survey/student'
-import teach from './views/componet/survey/teach'
+// evaluation
+import evaluatManage from './views/componet/evalueation/manage'
+import evaluatTeach from './views/componet/evalueation/teach'
+import evaluatTeachers from './views/componet/evalueation/teachers'
 
-import error404 from './views/componet/error/404'
-
-import home from './views/componet/home/home'
+// Wechat
+import weixinUser from './views/componet/weixin/user'
+import weixinPush from './views/componet/weixin/push'
+import weixinMessage from './views/componet/weixin/message'
 
 import login from './views/componet/login/login'
+import home from './views/componet/home/home'
+import deal from './views/componet/deal/deal'
 
-import searchphone from './views/componet/appmanger/applist/searchPhoneContent'
+import error404 from './views/componet/error/404'
 
 const routers = [{
     path: '/',
     meta: {
         title: '整体概况'
     },
-    component: (home) => require(['./views/index.vue'], home),
-
+    component: (home) => require(['./views/componet/index.vue'], home),
     children: [{
         path: '/',
         component: home
     }, {
-        path: '/message',
-        component: message
+        path: "/surveysituation",
+        component: surveySituation
     }, {
-        path: "/situation",
-        component: situation
+        path: "/surveycollege",
+        component: surveyCollege
     }, {
-        path: "/appmanger",
-        component: appmanger,
-        children: [{
-            path: "/appmanger/searchphone",
-            component: searchphone
-
-        }]
+        path: "/surveyfaculty",
+        component: surveyFaculty
     }, {
-        path: "/college",
-        component: college
+        path: "/surveyclassblock",
+        component: surveyClassBlock
     }, {
-        path: "/faculty",
-        component: faculty
+        path: "/surveystudent",
+        component: surveyStudent
     }, {
-        path: "/classBlock",
-        component: classBlock
+        path: "/surveyteach",
+        component: surveyTeach
     }, {
-        path: "/student",
-        component: student
+        path: '/evaluatmanage',
+        component: evaluatManage
     }, {
-        path: "/teach",
-        component: teach
+        path: '/evaluatteach',
+        component: evaluatTeach
+    }, {
+        path: '/evaluatteachers',
+        component: evaluatTeachers
+    }, {
+        path: '/weixinuser',
+        component: weixinUser
+    }, {
+        path: '/weixinpush',
+        component: weixinPush
+    }, {
+        path: '/weixinmessage',
+        component: weixinMessage
+    }, {
+        path: '/deal',
+        component: deal
     }]
 }, {
     path: "/login",

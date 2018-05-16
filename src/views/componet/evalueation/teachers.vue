@@ -1,11 +1,13 @@
 <template>
     <div>
-        dsadsad
+        this is teachers
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+
+    }
 </script>
 
 <style scoped>
