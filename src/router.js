@@ -12,7 +12,7 @@ import evaluatTeach from './views/componet/evalueation/teach'
 import evaluatTeachers from './views/componet/evalueation/teachers'
 
 // Wechat
-import weixinUser from './views/componet/weixin/user'
+import weixinUser from './views/componet/weixin/useradd'
 import weixinPush from './views/componet/weixin/push'
 import weixinMessage from './views/componet/weixin/message'
 

@@ -1,21 +1,23 @@
 <template>
     <div>
         <Breadcrumb id="frameBreadcrumb">
-            <BreadcrumbItem>主页</BreadcrumbItem>
-            <BreadcrumbItem>整体概况</BreadcrumbItem>
-            <BreadcrumbItem>院系情况</BreadcrumbItem>
+            <BreadcrumbItem>
+                <router-link to="/">
+                    主页
+                </router-link>
+            </BreadcrumbItem>
+            <BreadcrumbItem>{{$store.state.topnav[0]}}</BreadcrumbItem>
+            <BreadcrumbItem>{{$store.state.topnav[1]}}</BreadcrumbItem>
         </Breadcrumb>
     </div>
 </template>
 
 <script>
-    export default {
-    
-    }
+    export default {}
 </script>
 
 <style scoped>
-    #frameBreadcrumb{
+    #frameBreadcrumb {
         margin: 16px 0
     }
 </style>

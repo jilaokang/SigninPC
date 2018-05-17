@@ -8,7 +8,7 @@ import App from './app.vue';
 import 'iview/dist/styles/iview.css';
 import axios from 'axios';
 
-const store = require('./store/main.js')
+import store from './store/main'
 
 Vue.use(VueRouter);
 Vue.use(iView);

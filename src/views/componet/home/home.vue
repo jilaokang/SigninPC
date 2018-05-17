@@ -29,26 +29,10 @@
 
                 <Col span="9">
                     <Col span="12">
-                        <Row type="flex" justify="center" align="middle" class="diyCard">
-                            <Col span="8" class="backgroundColor">
-                                <Icon type="ios-bell"></Icon>
-                            </Col>
-                            <Col span="16">
-                                <h1>205人</h1>
-                                <p>（今日上课）</p>
-                            </Col>
-                        </Row>
+                        <smallCard :card="everyoneCard"></smallCard>
                     </Col>
                     <Col span="12">
-                        <Row type="flex" justify="center" align="middle" class="diyCard">
-                            <Col span="8">
-                                <Icon type="ios-person"></Icon>
-                            </Col>
-                            <Col span="16">
-                                <h1>198人</h1>
-                                <p>（今日签到）</p>
-                            </Col>
-                        </Row>
+                        <smallCard :card="signinCard"></smallCard>
                     </Col>
                     <Col span="24" class="marginTop16">
                         <Card>
@@ -107,10 +91,23 @@
 </template>
 
 <script>
+    import smallCard from '../common/smallCard'
+
     export default {
+        components: {smallCard},
         data() {
             return {
                 welcomeStr: "",
+                everyoneCard:{
+                    icon:"ios-bell",
+                    title:'今日上课',
+                    content:'205人'
+                },
+                signinCard:{
+                    icon:"ios-person",
+                    title:"今日签到",
+                    content:"198人"
+                },
                 columns1: [
                     {
                         title: '内容',

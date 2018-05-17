@@ -16,6 +16,11 @@
     export default {
         components: {
             survey, evalueation, record, weixin
+        },
+        methods: {
+            dd() {
+                store.state.topnav[0] = '测试版块'
+            }
         }
     };
 </script>
