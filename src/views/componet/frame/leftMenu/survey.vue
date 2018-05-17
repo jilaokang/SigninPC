@@ -4,27 +4,27 @@
             <Icon type="home"></Icon>
             整体概况
         </template>
-        <MenuItem name="1-1">
+        <MenuItem name="校园概况">
             <router-link to="/surveysituation">
                 校园概况
             </router-link>
         </MenuItem>
-        <MenuItem name="1-2">
+        <MenuItem name="院系情况">
             <router-link to="/surveyfaculty">
                 院系情况
             </router-link>
         </MenuItem>
-        <MenuItem name="1-3">
+        <MenuItem name="班级情况">
             <router-link to="/surveyclassblock">
                 班级情况
             </router-link>
         </MenuItem>
-        <MenuItem name="1-4">
+        <MenuItem name="教学情况">
             <router-link to="/surveyteach">
                 教学情况
             </router-link>
         </MenuItem>
-        <MenuItem name="1-5">
+        <MenuItem name="学生情况">
             <router-link to="/surveystudent">
                 学生情况
             </router-link>

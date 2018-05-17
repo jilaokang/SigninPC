@@ -1,5 +1,5 @@
 <template>
-    <Menu active-name="1-2" theme="light" width="auto" :open-names="['1','2','3']">
+    <Menu theme="light" width="auto" :open-names="['1','2','3']"  v-on:on-select="changeTopNav">
         <survey></survey>
         <evalueation></evalueation>
         <weixin></weixin>
@@ -18,10 +18,11 @@
             survey, evalueation, record, weixin
         },
         methods: {
-            dd() {
-                store.state.topnav[0] = '测试版块'
+            changeTopNav(name){
+                this.$store.commit('topnavUpdate',name)
             }
         }
+
     };
 </script>
 

@@ -3,28 +3,30 @@
         <div>
             <Row :gutter="16">
                 <Col span="6">
-                    <Card>
-                        <div>
-                            <Row class="marginBottom16" :gutter="16" type="flex" justify="center" align="middle">
-                                <Col span="6">
-                                    <img src="../../static/img/avatar.jpg" alt="头像">
-                                </Col>
-                                <Col span="18">
-                                    <h3>钱老师</h3>
-                                    <h4>{{this.welcomeStr}}</h4>
-                                </Col>
-                            </Row>
-                            <hr style="border-top:1px solid #dde5eb;"/>
-                            <Row :gutter="16" class="marginTop16">
-                                <Col span="24">
-                                    <div>
-                                        <p>上次登录时间：2018-5-13 18:30</p>
-                                        <p>上次登录地点：武汉</p>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </div>
-                    </Card>
+                    <Col span="24">
+                        <Card>
+                            <div>
+                                <Row class="marginBottom16" :gutter="16" type="flex" justify="center" align="middle">
+                                    <Col span="6">
+                                        <img src="../../static/img/avatar.jpg" alt="头像">
+                                    </Col>
+                                    <Col span="18">
+                                        <h3>钱老师</h3>
+                                        <h4>{{this.welcomeStr}}</h4>
+                                    </Col>
+                                </Row>
+                                <hr style="border-top:1px solid #dde5eb;"/>
+                                <Row :gutter="16" class="marginTop16">
+                                    <Col span="24">
+                                        <div>
+                                            <p>上次登录时间：2018-5-13 18:30</p>
+                                            <p>上次登录地点：武汉</p>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Card>
+                    </Col>
                 </Col>
 
                 <Col span="9">
@@ -98,15 +100,15 @@
         data() {
             return {
                 welcomeStr: "",
-                everyoneCard:{
-                    icon:"ios-bell",
-                    title:'今日上课',
-                    content:'205人'
+                everyoneCard: {
+                    icon: "ios-bell",
+                    title: '今日上课',
+                    content: '205人'
                 },
-                signinCard:{
-                    icon:"ios-person",
-                    title:"今日签到",
-                    content:"198人"
+                signinCard: {
+                    icon: "ios-person",
+                    title: "今日签到",
+                    content: "198人"
                 },
                 columns1: [
                     {

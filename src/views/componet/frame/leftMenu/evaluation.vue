@@ -4,13 +4,13 @@
             <Icon type="pie-graph"></Icon>
             综合评估
         </template>
-        <MenuItem name="2-1">
+        <MenuItem name="管理评估">
             <router-link to="/evaluatmanage">管理评估</router-link>
         </MenuItem>
-        <MenuItem name="2-2">
+        <MenuItem name="师资评估">
             <router-link to="/evaluatteachers">师资评估</router-link>
         </MenuItem>
-        <MenuItem name="2-3">
+        <MenuItem name="教学评估">
             <router-link to="/evaluatteach">教学评估</router-link>
         </MenuItem>
     </Submenu>

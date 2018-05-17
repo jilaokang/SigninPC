@@ -1,5 +1,5 @@
 <template>
-    <MenuItem name="4">
+    <MenuItem name="操作记录">
             <Icon type="paintbrush"></Icon>
             <router-link to="/deal">
                 操作记录

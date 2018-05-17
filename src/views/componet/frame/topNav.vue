@@ -6,14 +6,14 @@
                     主页
                 </router-link>
             </BreadcrumbItem>
-            <BreadcrumbItem>{{$store.state.topnav[0]}}</BreadcrumbItem>
-            <BreadcrumbItem>{{$store.state.topnav[1]}}</BreadcrumbItem>
+            <BreadcrumbItem v-if="$store.state.topnav">{{$store.state.topnav}}</BreadcrumbItem>
         </Breadcrumb>
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+    }
 </script>
 
 <style scoped>
