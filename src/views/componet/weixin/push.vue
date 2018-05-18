@@ -23,7 +23,7 @@
                 <Card>
                     <p slot="title">
                         <Icon type="ios-film-outline"></Icon>
-                        推送接口
+                        已推送接口
                     </p>
                 </Card>
             </Col>

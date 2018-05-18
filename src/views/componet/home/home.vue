@@ -182,7 +182,7 @@
                 ],
                 series: [
                     {
-                        name: '直接访问',
+                        name: '签到人数',
                         type: 'bar',
                         barWidth: '60%',
                         data: [34, 36, 35, 42, 36, 40]

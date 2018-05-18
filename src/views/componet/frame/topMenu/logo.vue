@@ -1,5 +1,7 @@
 <template>
-    <div class="layout-logo"></div>
+    <div class="layout-logo">
+
+    </div>
 </template>
 
 <script>
@@ -18,5 +20,9 @@
         position: relative;
         top: 15px;
         left: 20px;
+    }
+    img{
+        width: 100%;
+        height: 130%;
     }
 </style>
