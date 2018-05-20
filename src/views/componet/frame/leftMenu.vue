@@ -1,5 +1,5 @@
 <template>
-    <Menu theme="light" width="auto" :open-names="['1','2','3']"  v-on:on-select="changeTopNav">
+    <Menu theme="light" width="auto" :open-names="['1','2','3']" v-on:on-select="changeTopNav">
         <survey></survey>
         <evalueation></evalueation>
         <weixin></weixin>
@@ -12,18 +12,21 @@
     import evalueation from './leftMenu/evaluation'
     import record from './leftMenu/record'
     import weixin from './leftMenu/weixin'
+    import {mapMutations} from 'vuex'
 
     export default {
         components: {
             survey, evalueation, record, weixin
         },
         methods: {
-            changeTopNav(name){
-                this.$store.commit('topnavUpdate',name)
-            }
-        }
+            ...mapMutations(['NAV_UPDATE']),
+            changeTopNav(name) {
+                this.NAV_UPDATE(name);
+            },
+        },
 
-    };
+    }
+
 </script>
 
 <style>

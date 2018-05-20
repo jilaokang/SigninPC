@@ -31,10 +31,10 @@
 
                 <Col span="9">
                     <Col span="12">
-                        <smallCard :card="everyoneCard"></smallCard>
+                        <smallCard :card="weixinCard"></smallCard>
                     </Col>
                     <Col span="12">
-                        <smallCard :card="signinCard"></smallCard>
+                        <smallCard :card="betaCard"></smallCard>
                     </Col>
                     <Col span="24" class="marginTop16">
                         <Card>
@@ -47,45 +47,55 @@
                     </Col>
                 </Col>
                 <Col span="9">
-                    <Card>
-                        <p slot="title">
-                            <Icon type="ios-film-outline"></Icon>
-                            我的通知
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span>5月11号软工1501班签到情况</span>
-                                    <span style="float: right">5月11日</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>5月6号软工1501班签到情况</span>
-                                    <span style="float: right">5月6日</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>5月3号软工1501班签到情况</span>
-                                    <span style="float: right">5月3日</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>5月2号软工1501班签到情况</span>
-                                    <span style="float: right">5月2日</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </Card>
-                    <Card class="marginTop16">
-                        <p slot="title">
-                            <Icon type="ios-film-outline"></Icon>
-                            我的微信接口
-                        </p>
-                        <Table border :columns="columns1" :data="data1"></Table>
-                    </Card>
+                    <Col span="12">
+                        <smallCard :card="everyoneCard"></smallCard>
+                    </Col>
+                    <router-link to="/weixinpush">
+                        <Col span="12">
+                            <smallCard :card="signinCard"></smallCard>
+                        </Col>
+                    </router-link>
+                    <Col span="24" class="marginTop16">
+                        <Card>
+                            <p slot="title">
+                                <Icon type="ios-film-outline"></Icon>
+                                我的通知
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>5月11号软工1501班签到情况</span>
+                                        <span style="float: right">5月11日</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>5月6号软工1501班签到情况</span>
+                                        <span style="float: right">5月6日</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>5月3号软工1501班签到情况</span>
+                                        <span style="float: right">5月3日</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>5月2号软工1501班签到情况</span>
+                                        <span style="float: right">5月2日</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </Card>
+                        <Card class="marginTop16">
+                            <p slot="title">
+                                <Icon type="ios-film-outline"></Icon>
+                                我的微信接口
+                            </p>
+                            <Table border :columns="columns1" :data="data1"></Table>
+                        </Card>
+                    </Col>
                 </Col>
             </Row>
         </div>
@@ -102,13 +112,21 @@
                 welcomeStr: "",
                 everyoneCard: {
                     icon: "ios-bell",
-                    title: '今日上课',
-                    content: '205人'
+                    title: '消息通知条数',
+                    content: '3'
                 },
                 signinCard: {
+                    icon: "android-chat",
+                    title: "微信接口数",
+                    content: "6"
+                }, weixinCard: {
+                    icon: "ios-people",
+                    title: "今日系部签到率",
+                    content: "90%"
+                }, betaCard: {
                     icon: "ios-person",
-                    title: "今日签到",
-                    content: "198人"
+                    title: "今日班级签到率",
+                    content: "93%"
                 },
                 columns1: [
                     {

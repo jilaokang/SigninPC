@@ -1,18 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import mutations from './mutations.js'
 
 Vue.use(Vuex);
 
 const state = {
     count: "I am vuex",
     topnav: ""
-}
-
-const mutations = {
-    topnavUpdate(state, title) {
-        state.topnav = title;
-    }
-}
+};
 
 export default new Vuex.Store({
     state,

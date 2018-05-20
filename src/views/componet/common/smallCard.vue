@@ -28,12 +28,15 @@
     .diyCard {
         height: 120px;
         text-align: center;
-        border: #dde5eb 1px solid;
         border-radius: 5px;
+        background: #1f9bed;
     }
 
     .diyCard .ivu-icon {
         font-size: 3.5em;
-        color: #1f9bed;
+        color: white;
+    }
+    h1,p{
+        color: white;
     }
 </style>

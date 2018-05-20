@@ -1,6 +1,6 @@
 <template>
     <div class="layout-logo">
-
+        <img src="../../../static/img/logo.svg" alt="">
     </div>
 </template>
 
@@ -14,7 +14,6 @@
     .layout-logo {
         width: 100px;
         height: 30px;
-        background: #5b6270;
         border-radius: 3px;
         float: left;
         position: relative;
@@ -23,6 +22,5 @@
     }
     img{
         width: 100%;
-        height: 130%;
     }
 </style>

@@ -17,3 +17,12 @@
         methods: {}
     };
 </script>
+
+<style>
+    html{
+        background: #f5f7f9;
+    }
+    .layout{
+        border: none!important;
+    }
+</style>
